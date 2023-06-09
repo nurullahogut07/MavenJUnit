@@ -25,7 +25,7 @@ public class C03_Dropdown {
     }
 
     @Test
-    public void test1() throws InterruptedException {
+    public void test1()  {
         // programming languages ddm den istediginiz 4 secenegi seciniz
         WebElement languages = driver.findElement(By.xpath("(//select)[6]"));
         Select select =new Select(languages);
@@ -60,14 +60,27 @@ public class C03_Dropdown {
         //visibleText olarak secim yapacagimiz bir method olusturup programming languages ddm den bir secenek secelim
       selectVisibleText(languages,"Java");
       bekle(2);
+
+        //index olarak secim yapacagimiz bir method olusturup programming languages ddm den bir secenek
+      selectIndex(languages,1);
+        bekle(2);
+        //value olarak secim yapacagimiz bir method olusturup programming languages ddm den bir secenek
+        selectValue(languages,"c#");  // value atribute js olani aldik
+
     }
     // Assegida method olustuduk ve hemen yukarida bu methodu kullandik
-
     //Parametre olarak  webelement ve visibletext olarak girdik (ddm webelementimizin ismi neyse o )
     public void selectVisibleText(WebElement ddm ,String secenek){
         Select select=new Select(ddm);
         select.selectByVisibleText(secenek);
-
+    }
+    public void selectIndex(WebElement ddm ,int index){
+        Select select=new Select(ddm);
+        select.selectByIndex(index);
+    }
+    public void selectValue(WebElement ddm ,String value){
+        Select select=new Select(ddm);
+        select.selectByValue(value);
     }
     public void bekle (int saniye)  {  //exception atmadik her seferinde beklemesin diye try catch kullandik
         try {
