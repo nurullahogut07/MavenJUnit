@@ -111,6 +111,6 @@ Given kullanici https://testcenter.techproeducation.com/index.php?page=dropdown 
 
     @After
     public void tearDown() throws Exception {
-        driver.close();
+        //driver.close();
     }
 }
