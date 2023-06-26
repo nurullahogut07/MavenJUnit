@@ -1,0 +1,6 @@
+alert nedir ?
+  Alert uyari veya bilgi mesaji iceren penceredir .
+
+  Js Alerti nasil handle ederiz ?
+   Driver i switcTo() methodu ile alert() methodunu kullanarak gecis yapar ,
+    accept() veya dismiss() methodlari ile handle edebiliriz
